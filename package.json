@@ -1,6 +1,6 @@
 {
   "name": "discordjs-fun",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Discord-Fun is a discord npm package that makes fun features of your discord bot using DJS.",
   "main": "dist/index.js",
   "scripts": {

@@ -9,6 +9,8 @@ class DiscordFunError extends Error {
     sayHello() {
         return "Discord Fun Error: " + this.message;
     }
+
+    
 }
 
 export { DiscordFunError }

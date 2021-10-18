@@ -51,6 +51,30 @@ client.on('messageCreate', (message) => {
 })
 ```
 
+## Google Image 📷
+```js
+const { googleImage } = require('discordjs-fun');
+
+client.on('messageCreate', (message) => {
+  if(message.content === '?image') {
+    const result = await googleImage({ 
+       message,
+       slash: false, // Set to true if you use slash_command
+       query: message.content, 
+        api: {
+        key: "GOOGLE_API_KEY",
+        cx: "GOOGLE_CX_KEY"
+      },
+      embed: {
+        color: "RED"
+      }
+    })
+  
+    console.log(result);
+  }  
+})
+```
+
 ## Owoify 🐈
 ```js
 const { owoify } = require('discord.js');
