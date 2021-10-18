@@ -35,7 +35,7 @@ client.on('messageCreate', (message) => {
 
 ## Google Search 🔍
 ### How To Get Google { CX and API KEY };
-[![Video](https://res.cloudinary.com/marcomontalbano/image/upload/v1634533473/video_to_markdown/images/youtube--ueBLrCNZpjg-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/ueBLrCNZpjg "Video")
+[![Video](https://res.cloudinary.com/marcomontalbano/image/upload/v1634533757/video_to_markdown/images/youtube--xuWJUqmDzf0-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/xuWJUqmDzf0 "Video")
 ```js
 const { googleSearch } = require('discordjs-fun')
 
