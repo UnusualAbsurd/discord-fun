@@ -1,0 +1,24 @@
+{
+  "name": "discord-fun",
+  "version": "1.0.0",
+  "description": "Discord-Fun is a discord npm package that makes fun features of your discord bot using DJS.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/UnusualAbsurd/discord-fun.git"
+  },
+  "author": "https://github.com/UnusualAbsurd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UnusualAbsurd/discord-fun/issues"
+  },
+  "homepage": "https://github.com/UnusualAbsurd/discord-fun#readme",
+  "dependencies": {
+    "discord.js": "^13.2.0",
+    "ms": "^2.1.3",
+    "node-fetch": "^2.6.1"
+  }
+}

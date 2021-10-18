@@ -1,0 +1,1 @@
+{"version":3,"file":"8ball.js","sourceRoot":"","sources":["../../src/8ball/8ball.ts"],"names":[],"mappings":";;;AAKA,8DAG+B;AAE/B,MAAa,SAAS;IACX,OAAO,CAAe;IACtB,OAAO,CAAC;IAEf,YAAY,OAAqB;QAC7B,IAAG,CAAC,OAAO,CAAC,OAAO;YAAE,MAAM,IAAI,iCAAe,CAAC,MAAM,CAAC,CAAA;IAC1D,CAAC;CACJ;AAPD,8BAOC"}
