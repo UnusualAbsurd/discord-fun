@@ -28,7 +28,7 @@ client.on('messageCreate', (message) => {
       embed: {
           color: '#11FFEF'
       }
-    })
+    }).fire()
   }  
 })
 ```
