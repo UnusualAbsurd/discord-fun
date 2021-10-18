@@ -55,17 +55,17 @@ export class EightBall {
 
     constructor(options: EightBallInt) {
         if(!options.message) throw new DiscordFunError('Missing Option "message"');
-        if(typeof options.message !== 'object') throw new DiscordFunError('Message Option must be a TypeOf [OBJECT]');
+        if(typeof options.message !== 'object') throw new DiscordFunError('"message" Option must be a TypeOf [ OBJECT ]');
         
         if(!options.slash) options.slash = false;
-        if(options.slash && typeof options.slash !== 'boolean') throw new DiscordFunError('Slash Option must be a TypeOf [BOOLEAN]');
+        if(options.slash && typeof options.slash !== 'boolean') throw new DiscordFunError('Slash Option must be a TypeOf [ BOOLEAN ]');
         
         if(!options.question) throw new DiscordFunError('Missing Option "question"');
-        if(typeof options.question !== 'string') throw new DiscordFunError('Question Option must be a TypeOf [STRING]');
+        if(typeof options.question !== 'string') throw new DiscordFunError('"question" Option must be a TypeOf [ STRING ]');
 
         if(!options.embed) this.embed_option = false
         if(options.embed) this.embed_option = true;
-        if(options.embed && typeof options.embed.color !== 'string') throw new DiscordFunError('Embed Color Option must be a TypeOf [STRING]');
+        if(options.embed && typeof options.embed.color !== 'string') throw new DiscordFunError('"embed: color" Option must be a TypeOf [ STRING ]');
 
         this.options = options;
         this.message = options.message

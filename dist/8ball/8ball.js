@@ -40,26 +40,25 @@ class EightBall {
     options;
     message;
     embed_option;
-    result;
     constructor(options) {
         if (!options.message)
             throw new DiscordFunError_1.DiscordFunError('Missing Option "message"');
         if (typeof options.message !== 'object')
-            throw new DiscordFunError_1.DiscordFunError('Message Option must be a TypeOf [OBJECT]');
+            throw new DiscordFunError_1.DiscordFunError('"message" Option must be a TypeOf [ OBJECT ]');
         if (!options.slash)
             options.slash = false;
         if (options.slash && typeof options.slash !== 'boolean')
-            throw new DiscordFunError_1.DiscordFunError('Slash Option must be a TypeOf [BOOLEAN]');
+            throw new DiscordFunError_1.DiscordFunError('Slash Option must be a TypeOf [ BOOLEAN ]');
         if (!options.question)
             throw new DiscordFunError_1.DiscordFunError('Missing Option "question"');
         if (typeof options.question !== 'string')
-            throw new DiscordFunError_1.DiscordFunError('Question Option must be a TypeOf [STRING]');
+            throw new DiscordFunError_1.DiscordFunError('"question" Option must be a TypeOf [ STRING ]');
         if (!options.embed)
             this.embed_option = false;
         if (options.embed)
             this.embed_option = true;
         if (options.embed && typeof options.embed.color !== 'string')
-            throw new DiscordFunError_1.DiscordFunError('Embed Color Option must be a TypeOf [STRING]');
+            throw new DiscordFunError_1.DiscordFunError('"embed: color" Option must be a TypeOf [ STRING ]');
         this.options = options;
         this.message = options.message;
     }
@@ -76,13 +75,13 @@ class EightBall {
             if (!this.options.slash) {
                 this.message.channel.send({ embeds: [
                         // @ts-ignore
-                        new discord_js_1.MessageEmbed().addField('Answer', `\`\`\`🎱 ${answers[Math.floor(Math.random() * answers.length)]}\`\`\``).setColor(this.options.embed.color || "GREEN")
+                        new discord_js_1.MessageEmbed().addField(`Question`, `\`\`\`${this.options.question}\`\`\``).addField('Answer', `\`\`\`🎱 ${answers[Math.floor(Math.random() * answers.length)]}\`\`\``).setColor(this.options.embed.color || "GREEN")
                     ] });
             }
             else {
                 this.message.followUp({ embeds: [
                         // @ts-ignore
-                        new discord_js_1.MessageEmbed().addField('Answer', `\`\`\`🎱 ${answers[Math.floor(Math.random() * answers.length)]}\`\`\``).setColor(this.options.embed.color || "GREEN")
+                        new discord_js_1.MessageEmbed().addField(`Question`, `\`\`\`${this.options.question}\`\`\``).addField('Answer', `\`\`\`🎱 ${answers[Math.floor(Math.random() * answers.length)]}\`\`\``).setColor(this.options.embed.color || "GREEN")
                     ] });
             }
         }

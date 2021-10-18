@@ -3,7 +3,6 @@ export declare class EightBall {
     options: EightBallInt;
     message: any;
     embed_option: any;
-    result: any;
     constructor(options: EightBallInt);
     fire(): void;
 }
