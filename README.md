@@ -41,11 +41,36 @@ const { googleSearch } = require('discordjs-fun')
 
 client.on('messageCreate', (message) => {
   if(message.content === '?google') {
-    await googleSearch({ query: message.content, api: {
+    const result = await googleSearch({ query: message.content, api: {
         key: "GOOGLE_API_KEY",
         cx: "GOOGLE_CX_KEY"
-    } })
+    }})
+  
+    console.log(result);
   }  
 })
 ```
 
+## Owoify 🐈
+```js
+const { owoify } = require('discord.js');
+
+const result = owoify('Hello World!');
+console.log(result)
+
+```
+
+## Flip 🤞
+```js
+const { flip } = require('discordjs-fun');
+
+client.on('messageCreate', (message) => {
+  if(message.content === '?flip') {
+      new EightBall({
+      message,
+      slash: false // Set to true of you use slash command
+      flip_emoji: 'CUSTOM_EMOJI / OTHER EMOJI' // Optional
+    })
+  }  
+})
+```

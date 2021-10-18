@@ -36,15 +36,21 @@ export const googleSearch = async(options: GoogleInt) => {
    if(!key) throw new DiscordFunError('Missing Option "api: key"');
    if(typeof key !== 'string') throw new DiscordFunError('"api: key" Option must be a TypeOf [ STRING ]');
 
+   let result;
+
    await fetch(`https://www.googleapis.com/customsearch/v1?key=${key}&cx=${cx}&q=${query}`, { method: "GET" })
    .then(response => response.json())
    .then((res) => {
-       if(!res.items?.length) return 'No Result';
+       try{
+       if(!res.items?.length) result = 'No Result';
        else {
-           return res.items[0]
+           result = res.items[0]
+       }
+    }  
+       catch(e) {
+         console.error(e);  
        }
    })
-  
 
-
+   return result;
 }
