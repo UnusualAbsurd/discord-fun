@@ -51,7 +51,6 @@ export class EightBall {
     public options: EightBallInt;
     public message;
     public embed_option;
-    public result;
 
 
     constructor(options: EightBallInt) {
@@ -84,13 +83,13 @@ export class EightBall {
           if(!this.options.slash) {
              this.message.channel.send({ embeds: [
                  // @ts-ignore
-                new MessageEmbed().addField('Answer', `\`\`\`🎱 ${answers[Math.floor(Math.random() * answers.length)]}\`\`\``).setColor(this.options.embed.color || "GREEN")
+                new MessageEmbed().addField(`Question`, `\`\`\`${this.options.question}\`\`\``).addField('Answer', `\`\`\`🎱 ${answers[Math.floor(Math.random() * answers.length)]}\`\`\``).setColor(this.options.embed.color || "GREEN")
              ] })
           }
           else {
             this.message.followUp({ embeds: [
                 // @ts-ignore
-               new MessageEmbed().addField('Answer', `\`\`\`🎱 ${answers[Math.floor(Math.random() * answers.length)]}\`\`\``).setColor(this.options.embed.color || "GREEN")
+                new MessageEmbed().addField(`Question`, `\`\`\`${this.options.question}\`\`\``).addField('Answer', `\`\`\`🎱 ${answers[Math.floor(Math.random() * answers.length)]}\`\`\``).setColor(this.options.embed.color || "GREEN")
             ] })
          }
         }
