@@ -6,7 +6,7 @@ class DiscordFunError extends Error {
         Object.setPrototypeOf(this, DiscordFunError.prototype);
     }
 
-    sayHello() {
+    fire() {
         return "Discord Fun Error: " + this.message;
     }
 
